@@ -36,6 +36,7 @@ function App(): React.JSX.Element {
                     </Col>
                 </Row>
             </Container>
+            <p><strong>Hello World</strong></p>
         </div>
     );
 }
