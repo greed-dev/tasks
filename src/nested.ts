@@ -29,7 +29,7 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
  */
 export function findQuestion(
     questions: Question[],
-    id: number
+    id: number,
 ): Question | null {
     return questions.find((question: Question) => {
         return question.id === id;
@@ -97,7 +97,7 @@ export function addNewQuestion(
     questions: Question[],
     id: number,
     name: string,
-    type: QuestionType
+    type: QuestionType,
 ): Question[] {
     let newQuestions = questions.map((question: Question) => {
         return {...question, options: [...question.options]}
@@ -118,7 +118,7 @@ export function addNewQuestion(
 export function renameQuestionById(
     questions: Question[],
     targetId: number,
-    newName: string
+    newName: string,
 ): Question[] {
     return questions.map((question: Question) => {
         if (question.id === targetId) {
@@ -144,7 +144,7 @@ export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
-    newOption: string
+    newOption: string,
 ): Question[] {
     return questions.map((question: Question) => {
         if (question.id === targetId) {
@@ -161,4 +161,5 @@ export function editOption(
             return {...question, options: [...question.options]};
         }
     });
+    return [];
 }
