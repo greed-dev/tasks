@@ -47,7 +47,7 @@ function App(): React.JSX.Element {
             </Container>
             <p><strong>Hello World</strong></p>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
